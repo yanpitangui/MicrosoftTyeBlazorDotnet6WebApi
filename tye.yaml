@@ -1,0 +1,11 @@
+name: tye-example
+registry: aethelingaeg
+services:
+- name: backend
+  project: Backend/Backend.csproj
+  bindings:
+    - port: 7000
+- name: frontend
+  project: Frontend/Frontend.csproj
+  bindings:
+    - port: 8000
