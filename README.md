@@ -4,16 +4,16 @@ Example application of microsoft tye for microservices
 Microsoft tye makes it so easy to connect your microservices.
 It supports project (.csproj, etc) and docker images.
 
-Look at how frontend connect to backend's ip address:
+Look at how easily the frontend project connect to backend's ip address:
 ```csharp
 builder.Services.AddHttpClient("weatherapi", client =>
 {
     client.BaseAddress = builder.Configuration.GetServiceUri("backend");
 });
 ```
+Tye takes care of that for you. You just have to give this method the same name as defined in tye.yaml.
+
 This definition can be found on frontend's ```Program.cs```.
-
-
 
 ## Requirements
 1. Install microsoft tye: 
